@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutonomizeAI — Team Activity Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">AutonomizeAI</span>
+        </div>
+        <p class="header-sub">Ask me what your team is working on</p>
+      </div>
+    </header>
+
+    <main class="chat-container">
+      <div class="messages" id="messages">
+        <div class="message assistant">
+          <div class="avatar">AI</div>
+          <div class="bubble">
+            <p>Hi! I can tell you what your team members are working on by checking their JIRA tickets and GitHub activity.</p>
+            <p>Try asking about one of our demo team members:</p>
+            <ul>
+              <li><em>"What is Sarah working on?"</em></li>
+              <li><em>"Show me Mike's recent commits"</em></li>
+              <li><em>"What has Lisa been up to this week?"</em></li>
+              <li><em>"What is John working on these days?"</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="input-area">
+<form class="input-form" id="input-form">
+        <input
+          type="text"
+          id="user-input"
+          class="input-field"
+          placeholder="Ask about a team member..."
+          autocomplete="off"
+          autofocus
+        />
+        <button type="submit" class="send-btn" id="send-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+      <p class="disclaimer">Pulls live data from JIRA &amp; GitHub via Claude AI</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
